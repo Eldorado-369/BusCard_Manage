@@ -1,0 +1,285 @@
+* {
+    font-family: Roboto, sans-serif;
+}
+
+::selection {
+    background-color: #6610f2;
+    color: #ebeef1;
+}
+
+
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(232, 234, 236);
+    margin: 0;
+    padding: 0;
+    background: url('../image/college.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+input {
+    background-color: #ebeef1;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    height: 4em;
+    width: 25em;
+    padding-left: 2em;
+    transition: box-shadow 0.3s ease;
+    color: #6610f2;
+}
+
+input:hover,
+input:focus {
+    outline: none;
+    box-shadow: inset 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+}
+
+input::placeholder {
+    color: #6610f2;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: column;
+    width: 26em;
+    align-items: center;
+    height: 20em;
+    padding-top: 7em;
+    box-shadow: none;
+    border: none;
+}
+
+.person {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20em;
+    padding-bottom: 3em;
+    width: inherit;
+    box-shadow: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c172e9;
+}
+
+.detail {
+    font-weight: bold;
+    color: #6610f2;
+    font-size: 2em;
+    font-family: sans-serif;
+    margin-top: -4rem;
+    padding-bottom: 2rem;
+}
+
+.createaccount{
+    padding-bottom: 2.5rem;
+    color:#6610f2;
+}
+
+.logInBox {
+     display: flex;
+     flex-direction: column; 
+     justify-content: space-around; 
+     align-items: center; 
+     background-color: #e8eaec; 
+     height: 32rem; 
+     width: 42rem; 
+     text-align: center; 
+     border: none; 
+     border-radius: 50px; 
+     /* box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);  */
+     /* margin-left: auto; Align to the right */
+     margin-right: 5rem;
+    
+}
+
+input[type="submit"] {
+    margin: 20px;
+    width: 10em;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+}
+
+span {
+    color: red;
+    font-size: 0.7em;
+}
+
+#invalidCredentials {
+    display: none;
+}
+
+.fa-eye,
+.fa-eye-slash {
+    cursor: pointer;
+    height: 1.3em;
+    position: relative;
+    top: -2.3em;
+    left: 9em;
+    color: #6610f2;
+}
+
+.loader {
+    background: rgb(232, 234, 236);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.busBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3em;
+    width: 7em;
+    background-color: #B85EE6;
+    border-radius: 0.2em 1em 0.3em 0.3em;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(189 200 213);
+    animation: busBounce 1s linear infinite;
+}
+
+@keyframes busBounce {
+    50% {
+        transform: translateY(-20%);
+    }
+
+    70% {
+        transform: translateY(-10%);
+    }
+}
+
+.upperBody {
+    display: flex;
+    justify-content: space-between;
+    background-color: #B85EE6;
+    border-radius: 0.2em 1em 0em 0em;
+}
+
+.driverWindow {
+    margin-top: 0.31em;
+    margin-right: 0.25em;
+    background-color: #CA86EC;
+    height: 1.2em;
+    width: 1.4em;
+    border-radius: 0em 0.7em 0em 0em;
+}
+
+.peopleWindows {
+    display: flex;
+    height: 2em;
+    width: 6em;
+    background-color: #B85EE6;
+    margin-left: 0em;
+    margin-top: 0em;
+    justify-content: space-evenly;
+    border-radius: 0.2em 0em 0em 0em;
+}
+
+.window1,
+.window2,
+.window3 {
+    background-color: #CA86EC;
+    height: 1.2em;
+    width: 1.5em;
+    margin-top: 0.31em;
+}
+
+.collegeName {
+    margin-left: 3.1em;
+    margin-top: 2.3em;
+    position: absolute;
+    font-family: Arial Black, 'Courier New', Courier, monospace;
+    color: #CA86EC;
+    font-size: 0.7em;
+}
+
+.lowerBody {
+    display: flex;
+    height: 1em;
+    border-radius: 0em 0em 0.3em 0.3em;
+    background-color: #B85EE6;
+}
+
+.backLight {
+    background-color: #CA86EC;
+    height: 0.5em;
+    width: 0.2em;
+    border-radius: 0em 0.5em 0.5em 0em;
+}
+
+.headlight {
+    background-color: #CA86EC;
+    height: 0.5em;
+    width: 0.2em;
+    margin-left: 6.6em;
+    border-radius: 0.5em 0em 0em 0.5em;
+}
+
+.backTyre {
+    background-color: #E4C2F5;
+    height: 1em;
+    width: 1em;
+    margin-top: 2.5em;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    animation: tyreRotate 1s ease-in-out infinite;
+}
+
+.innerBackTyre,
+.innerFrontTyre {
+    background: linear-gradient(135deg, #C172E9 0%, #C172E9 49%, #6D3190 50%, #6D3190 100%);
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 50%;
+    margin-top: 0.15em;
+}
+
+.frontTyre {
+    background-color: #E4C2F5;
+    height: 1em;
+    width: 1em;
+    margin-top: 2.5em;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 5em;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    animation: tyreRotate 1s ease-in-out infinite;
+}
+
+@keyframes tyreRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
